@@ -1,0 +1,14 @@
+name: Status Icon
+on:
+  workflow_dispatch:
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Status Icon
+      uses: JasonEtco/status-check-action@v2.5.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        status: "Passing"
+        message: "Everything is working"
